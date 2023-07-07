@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .main-descriprion{
     /* background-color: rgb(53, 101, 129); */
     width: 98.3%;
@@ -27,7 +33,9 @@
 .features{
     width: 50%;
 }
-
+.features td{
+    font-family: 'Poppins', sans-serif;
+}
 
 /* Features TABLE */
 
@@ -108,6 +116,63 @@
     font-family: 'Poppins',sans-serif;
 }
 
+
+
+
+
+/* Accordion  */
+.accordion{
+    width: 100%;
+    background: #F2F2F3;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow:  0 0 4px rgba(0,0,0,0.2);
+}
+.accordion .accordion-content{
+    margin: 10px 0;
+    border-radius: 4px;
+    background: #FFF7F0;
+    border: 1px solid #FFD6B3;
+    overflow: hidden;
+}
+.accordion-content:nth-child(2){
+    background-color: #F0FAFF;
+    border-color: #CCEEFF;
+}
+.accordion-content.open{
+    padding-bottom: 100px;
+}
+.accordion-content > header{
+    display: flex;
+    min-height: 40px;
+    padding: 0 15px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s linear;
+}
+.accordion-content.open > header{
+    min-height: 35px;
+}
+.accordion-content > header .title{
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+.accordion-content > header i{
+    font-size: 15px;
+    color: #333;
+}
+.accordion-content .description{
+    height: 0;
+    font-size: 12px;
+    color: #333;
+    font-weight: 400;
+    padding: 0 15px;
+    transition: all 0.2s linear;
+}
+
+
       @media only screen and (max-width: 768px) {
         .main-descriprion{
             flex-wrap: wrap;
@@ -126,7 +191,6 @@
             flex-direction: column-reverse;
             justify-content: space-between;
             align-items: center;
-            padding: 0 20px;
-            height: 12vh;
+            padding: 10px 20px 0 20px;
         }
       }
