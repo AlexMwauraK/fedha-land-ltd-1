@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fedha Land Ventures</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Google Font-->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+	<!-- fontawsome icons  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+	<!-- Testimonials  -->
+    <!-- *******  Font Awesome Icons Link  ******* -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+
+    <!-- *******  Owl Carousel Links  ******* -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+	<!--Stylesheet-->
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="icon" type="image/png" href="/img/favicon.png">
+    <link rel="stylesheet" href="/css/property.css">
+	<!--Script-->
+	<script src="/js/script.js"></script>
+</head>
+<body>
+	<div id="preloader"></div>
+	<header>
+		<div class="logo"><a href="/index.html"><img src="/img/Fedha-Logo.jpg" alt="company logo"></a></div>
+		<div class="quickinfo">
+			<div class="screen-icons">
+				<a href="mailto:fedhalandventures@gmail.com"><i class="fas fa-envelope"></i> Info@fedhalandventures.co.ke</a>
+				<a href="tel:+254798384040"><i class="fas fa-phone-alt"></i> +254798384040</a>
+			</div>	
+			<!-- MOBI -->
+		<div class="mobi-icons">
+			<p>
+				<span><a href="https://www.instagram.com/fedhalandventures/"><i class="fab fa-instagram"></i></a></span>
+			</p>
+			<p>
+				<span><a href="https://web.facebook.com/%F0%9D%90%85%F0%9D%90%9E%F0%9D%90%9D%F0%9D%90%A1%F0%9D%90%9A-%F0%9D%90%8B%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9D-%F0%9D%90%95%F0%9D%90%9E%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%AE%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%AC-114931514922653"><i class="fab fa-facebook-f"></i></a></span>
+			</p>
+			<p>
+				<span><a href="https://twitter.com/search?q=fedha%20land%20ventures&src=typed_query"><i class="fab fa-twitter"></i></a></span>
+			</p>
+			<p>
+				<span><a href="https://wa.me/+254798384040"><i class="fab fa-whatsapp"></i></a></span>
+			</p>
+		</div>	
+
+		</div>
+	</header>
+	<nav id="nav">
+		<header class="header2">
+			<div class="container">
+			   <div class="header-main">
+				  <div class="open-nav-menu">
+					 <span></span>
+				  </div>
+				  <div class="menu-overlay">
+				  </div>
+				  <!-- navigation menu start -->
+				  <div class="nav-menu">
+					<div class="close-nav-menu">
+					   <img src="img/close.svg" alt="close">
+					</div>
+					<ul class="menu">
+					  <li class="menu-item">
+						 <a href="/index.html">Home</a>
+					  </li>
+					   <li class="menu-item menu-item-has-children">
+						  <a href="#" data-toggle="sub-menu">About<i class="plus"></i></a>
+						  <ul class="sub-menu">
+							  <li class="menu-item"><a href="#">About</a></li>
+							  <li class="menu-item"><a href="#">Our Team</a></li>
+							  <li class="menu-item"><a href="#">FAQs</a></li>
+						  </ul>
+					   </li>
+	   
+					   <li class="menu-item">
+						  <a href="#">Media</a>
+					   </li>
+					   <li class="menu-item menu-item-has-children">
+						  <a href="#" data-toggle="sub-menu">Properties<i class="plus"></i></a>
+						  <ul class="sub-menu">
+							  <li class="menu-item"><a href="#">Fadhili Garden</a></li>
+							  <li class="menu-item"><a href="#">Property 2</a></li>
+							  <li class="menu-item"><a href="#">Propert 3</a></li>
+						  </ul>
+					   </li>
+					   <li class="menu-item">
+						  <a href="#">Contact</a>
+					   </li>
+					</ul>
+				</div>
+				  <!-- navigation menu end -->
+			   </div>
+			</div>
+		 </header>
+		 <!-- header end -->
+		</nav>
+	   
+		
+	   <script>
+		  //HEADER JS
+	   (() =>{
+		
+		  const openNavMenu = document.querySelector(".open-nav-menu"),
+		  closeNavMenu = document.querySelector(".close-nav-menu"),
+		  navMenu = document.querySelector(".nav-menu"),
+		  menuOverlay = document.querySelector(".menu-overlay"),
+		  mediaSize = 991;
+		
+		  openNavMenu.addEventListener("click", toggleNav);
+		  closeNavMenu.addEventListener("click", toggleNav);
+		  // close the navMenu by clicking outside
+		  menuOverlay.addEventListener("click", toggleNav);
+		
+		  function toggleNav() {
+			 navMenu.classList.toggle("open");
+			 menuOverlay.classList.toggle("active");
+			 document.body.classList.toggle("hidden-scrolling");
+		  }
+		
+		  navMenu.addEventListener("click", (event) =>{
+			  if(event.target.hasAttribute("data-toggle") && 
+				 window.innerWidth <= mediaSize){
+				 // prevent default anchor click behavior
+				 event.preventDefault();
+				 const menuItemHasChildren = event.target.parentElement;
+				// if menuItemHasChildren is already expanded, collapse it
+				if(menuItemHasChildren.classList.contains("active")){
+				   collapseSubMenu();
+				}
+				else{
+				  // collapse existing expanded menuItemHasChildren
+				  if(navMenu.querySelector(".menu-item-has-children.active")){
+				   collapseSubMenu();
+				  }
+				  // expand new menuItemHasChildren
+				  menuItemHasChildren.classList.add("active");
+				  const subMenu = menuItemHasChildren.querySelector(".sub-menu");
+				  subMenu.style.maxHeight = subMenu.scrollHeight + "px";
+				}
+			  }
+		  });
+		  function collapseSubMenu(){
+			 navMenu.querySelector(".menu-item-has-children.active .sub-menu")
+			 .removeAttribute("style");
+			 navMenu.querySelector(".menu-item-has-children.active")
+			 .classList.remove("active");
+		  }
+		  function resizeFix(){
+			  // if navMenu is open ,close it
+			  if(navMenu.classList.contains("open")){
+				 toggleNav();
+			  }
+			  // if menuItemHasChildren is expanded , collapse it
+			  if(navMenu.querySelector(".menu-item-has-children.active")){
+				   collapseSubMenu();
+			 }
+		  }
+		
+		  window.addEventListener("resize", function(){
+			 if(this.innerWidth > mediaSize){
+				resizeFix();
+			 }
+		  });
+		
+		})();
+	   </script>
+	
+	<!-- <img src="/img/image.jpg"> -->
+
+
+
+	
+<!-- Top Carousel Section 	 -->
+	<section class="slider">
+		<div class="myslide fade">
+			<div class="txt">
+			  <h1></h1>
+			  <p>FEDHA LAND VENTURES</p>
+			</div>
+			<img src="/img/hero_page/carosel/1.jpg" style="width: 100%; height: 100%;">
+		  </div>
+		  
+		  <div class="myslide fade">
+			<div class="txt">
+			  <h1></h1>
+			  <p>INVEST WITH US NOW!!</p>
+			</div>
+			<img src="/img/hero_page/carosel/2.jpg" style="width: 100%; height: 100%;">
+		  </div>
+		  
+		  <div class="myslide fade">
+			<div class="txt">
+			  <h1></h1>
+			  <p>WHERE DREAMS FIND THEIR ADDRESS</p>
+			</div>
+			<img src="/img/hero_page/carosel/3.jpg" style="width: 100%; height: 100%;">
+		  </div>
+		  
+		  <div class="myslide fade">
+			<div class="txt">
+			  <h1></h1>
+			  <p>OPENING NEW HORAIZONS IN PROPERTY AQUISITION</p>
+			</div>
+			<img src="/img/hero_page/carosel/4.jpg" style="width: 100%; height: 100%;">
+		  </div>
+		  
+		  <div class="myslide fade">
+			<div class="txt">
+			  <h1></h1>
+			  <p>OFFERING GURANTEED SERVIVES</p>
+			</div>
+			<img src="/img/hero_page/carosel/5.jpg" style="width: 100%; height: 100%;">
+		  </div>
+		  <!-- /fade css -->
+		  
+		  <!-- onclick js -->
+		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		  
+		  <div class="dotsbox" style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+			<span class="dot" onclick="currentSlide(5)"></span>
+		  </div>
+		  <!-- /onclick js -->
+
+		  <script>
+			const myslide = document.querySelectorAll('.myslide'),
+			dot = document.querySelectorAll('.dot');
+		  let counter = 1;
+		  slidefun(counter);
+		  
+		  let timer = setInterval(autoSlide, 8000);
+		  function autoSlide() {
+		  counter += 1;
+		  slidefun(counter);
+		  }
+		  function plusSlides(n) {
+		  counter += n;
+		  slidefun(counter);
+		  resetTimer();
+		  }
+		  function currentSlide(n) {
+		  counter = n;
+		  slidefun(counter);
+		  resetTimer();
+		  }
+		  function resetTimer() {
+		  clearInterval(timer);
+		  timer = setInterval(autoSlide, 8000);
+		  }
+		  
+		  function slidefun(n) {
+		  
+		  let i;
+		  for(i = 0;i<myslide.length;i++){
+			myslide[i].style.display = "none";
+		  }
+		  for(i = 0;i<dot.length;i++) {
+			dot[i].className = dot[i].className.replace(' active', '');
+		  }
+		  if(n > myslide.length){
+			 counter = 1;
+			 }
+		  if(n < 1){
+			 counter = myslide.length;
+			 }
+		  myslide[counter - 1].style.display = "block";
+		  dot[counter - 1].className += " active";
+		  }
+		  </script>
+
+
+
+
+
+
+
+	</section>
+
+
+
+<!--Description section  -->
+	<div class="headings">
+		<p>Fadhili Garden Makutano  <i class="fas fa-caret-down"></i><i class="fas fa-caret-down"></i><i class="fas fa-caret-down"></i></p>
+	</div>
+
+    <div class="main-descriprion">
+        <div class="information">
+          <h3>350,000/= Cash price</h3>
+          <P>Are you looking for prime land to build your dream home not far from Nairobi?  Fadhili Garden Makutano - Phase 1 is the place. It offers your family a serene living and a quiet place away from the hectic and noisy city environment .
+          </P>
+          <p>
+            Prime 50X100 plots strategically located only 5kms off Makutano Junction (along the new Kenol - Marua dual carriageway.)
+          </p>
+          <p>
+            Payment plan inclusive of title deed fee: <br>
+      350,000Ksh for cash buyers. <br>
+      385,000Ksh (Deposit 100K and pay balance in 6 months). <br>
+      Note: prices are title fee inclusive.
+      
+          </p>
+        </div>
+      
+      <!-- Land Features   -->
+        <div class="features">
+          <table >
+            <tr>
+              <th>Features</th>
+            </tr>
+      
+          <tr>
+            <td>
+              1. Well drained virgin red soil for immediate settlement & agribusiness.
+            </td>
+          </tr>
+         
+          <tr>
+            <td>
+              2. Neighbouring Kamweli Shopping centre, Kamweli Secondary school and Kamweli Dispensary.
+            </td>
+          </tr>
+         
+          <tr>
+            <td>
+              3. All weather access road.
+            </td>
+          </tr>
+         
+          <tr>
+            <td>
+              4. Well developed and secure neighborhood.
+            </td>
+          </tr>
+         
+          <tr>
+            <td>
+              5. Electricity and water available.
+            </td>
+          </tr>
+         
+          </table>
+        </div>
+      </div>
+
+
+
+
+<!-- Buttons  -->
+<div class="sitevisit">
+    <a href="/index.html" class="glink"><p class="btn1">View More Properties</p></a>
+    <a href="" class="glink"><p class="btn2">Book Free site visit</p></a>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- footer section  -->
+<footer>
+	<div class="foot">
+	  <div class="top">
+		<div class="logo-details">
+		  <span class="logo_name">Fedha Land Ventures</span>
+		</div>
+		<div class="media-icons">
+		  <a href="https://web.facebook.com/%F0%9D%90%85%F0%9D%90%9E%F0%9D%90%9D%F0%9D%90%A1%F0%9D%90%9A-%F0%9D%90%8B%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9D-%F0%9D%90%95%F0%9D%90%9E%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%AE%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%AC-114931514922653" target="_blank"><i class="fab fa-facebook-f"></i></a>
+		  <a href="https://twitter.com/search?q=fedha%20land%20ventures&src=typed_query" target="_blank"><i class="fab fa-twitter"></i></a>
+		  <a href="https://www.instagram.com/fedhalandventures/" target="_blank"><i class="fab fa-instagram"></i></a>
+		  <a href="https://wa.me/+254798384040" target="_blank"><i class="fab fa-whatsapp"></i></a>
+		  <a href="https://www.tiktok.com/@fedhalandventures" target="_blank"><i class="fab fa-tiktok"></i></a>
+		  <a href="https://www.youtube.com/results?search_query=fedha+land+ventures" target="_blank"><i class="fab fa-youtube"></i></a>
+		</div>
+	  </div>
+	  <div class="link-boxes">
+		<ul class="box">
+		  <li class="link_name">Quick links</li>
+		  <li><a href="/index.html">Home</a></li>
+		  <li><a href="#">properties</a></li>
+		  <li><a href="#">About us</a></li>
+		  <li><a href="#">diaspora clients</a></li>
+		</ul>
+		<ul class="box">
+		  <li class="link_name">Info</li>
+		  <li><a href="https://www.google.com/maps/place/Fedha+Land+Ventures/@-1.1471466,36.9584616,19z/data=!4m6!3m5!1s0x182f474b80c7eeff:0xcc6b79a45ed5fc75!8m2!3d-1.1470355!4d36.959198!16s%2Fg%2F11stj96z1b?entry=ttu">Location <br>
+		  Nyongo house 1st floor-Ruiru<br>
+		  
+		  </a></li>
+		  <li><a href="#">Helpline</a></li>
+		</ul>
+		<ul class="box">
+		  <li class="link_name">plots for sale</li>
+		  <li><a href="#">50 x 100 Deals</a></li>
+		  <li><a href="#">2</a></li>
+		  <li><a href="#">3</a></li>
+		</ul>
+		<ul class="box">
+		  <li class="link_name">Projects</li>
+		  <li><a href="#">Fadhili Garden Makutano</a></li>
+		  <!-- <li><a href="#">kenya</a></li>
+		  <li><a href="#">nairobi</a></li> -->
+		</ul>
+		<ul class="box input-box">
+		  <li class="link_name">Subscribe</li>
+		  <li><input type="email" placeholder="Enter your email" name="email" required></li>
+		  <li><input type="button" value="Subscribe"></li>
+		</ul>        
+	  </div>
+	</div>
+	<div class="bottom-details">
+	  <div class="bottom_text">
+		<span class="copyright_text">Copyright &#169; 2023 <a href="#"></a>All rights reserved</span>
+		<span class="policy_terms">
+		  <a href="#">Privacy policy</a>
+		  <a href="#">Terms & condition</a>
+		</span>
+	  </div>
+	</div>
+  </footer>
+
+  <!-- javascript link-->
+  <script src="/js/script.js"></script>
+  <script type="text/javascript" src="/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <!--   *****   Owl Carousel js Link  *****  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+</body>
+</html>
