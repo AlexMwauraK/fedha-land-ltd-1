@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fedha Land Ventures</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Google Font-->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Work+Sans&display=swap" rel="stylesheet">
+	<!-- fontawsome icons  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+	<!-- Testimonials  -->
+    <!-- *******  Font Awesome Icons Link  ******* -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+
+    <!-- *******  Owl Carousel Links  ******* -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+	<!--Stylesheet-->
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="icon" type="image/png" href="/img/favicon.png">
+	<!--Script-->
+	<script src="/js/script.js"></script>
+</head>
+<body>
+	<div id="preloader"></div>
+	<header>
+		<div class="logo"><a href="/index.html"><img src="/img/Fedha-Logo.jpg" alt="company logo"></a></div>
+		<div class="quickinfo">
+			<div class="screen-icons">
+				<a href="mailto:fedhalandventures@gmail.com"><i class="fas fa-envelope"></i> Info@fedhalandventures.co.ke</a>
+				<a href="tel:+254798384040"><i class="fas fa-phone-alt"></i> +254798384040</a>
+			</div>	
+			<!-- MOBI -->
+		<div class="mobi-icons">
+			<p>
+				<span><a href="https://www.instagram.com/fedhalandventures/"><i class="fab fa-instagram"></i></a></span>
+			</p>
+			<p>
+				<span><a href="https://web.facebook.com/%F0%9D%90%85%F0%9D%90%9E%F0%9D%90%9D%F0%9D%90%A1%F0%9D%90%9A-%F0%9D%90%8B%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9D-%F0%9D%90%95%F0%9D%90%9E%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%AE%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%AC-114931514922653"><i class="fab fa-facebook-f"></i></a></span>
+			</p>
+			<p>
+				<span><a href="https://twitter.com/search?q=fedha%20land%20ventures&src=typed_query"><i class="fab fa-twitter"></i></a></span>
+			</p>
+			<p>
+				<span><a href="https://wa.me/+254798384040"><i class="fab fa-whatsapp"></i></a></span>
+			</p>
+		</div>	
+
+		</div>
+	</header>
+	<nav id="nav">
+		<header class="header2">
+			<div class="container">
+			   <div class="header-main">
+				  <div class="open-nav-menu">
+					 <span></span>
+				  </div>
+				  <div class="menu-overlay">
+				  </div>
+				  <!-- navigation menu start -->
+				  <div class="nav-menu">
+					<div class="close-nav-menu">
+					   <img src="img/close.svg" alt="close">
+					</div>
+					<ul class="menu">
+					  <li class="menu-item">
+						 <a href="#">Home</a>
+					  </li>
+					   <li class="menu-item menu-item-has-children">
+						  <a href="#" data-toggle="sub-menu">About<i class="plus"></i></a>
+						  <ul class="sub-menu">
+							  <li class="menu-item"><a href="#">About</a></li>
+							  <li class="menu-item"><a href="#">Our Team</a></li>
+							  <li class="menu-item"><a href="#">FAQs</a></li>
+						  </ul>
+					   </li>
+	   
+					   <li class="menu-item">
+						  <a href="#">Media</a>
+					   </li>
+					   <li class="menu-item menu-item-has-children">
+						  <a href="#" data-toggle="sub-menu">Properties<i class="plus"></i></a>
+						  <ul class="sub-menu">
+							  <li class="menu-item"><a href="#">Fadhili Garden</a></li>
+							  <li class="menu-item"><a href="#">Property 2</a></li>
+							  <li class="menu-item"><a href="#">Propert 3</a></li>
+						  </ul>
+					   </li>
+					   <li class="menu-item">
+						  <a href="#">Contact</a>
+					   </li>
+					</ul>
+				</div>
+				  <!-- navigation menu end -->
+			   </div>
+			</div>
+		 </header>
+		 <!-- header end -->
+		</nav>
+	   
+		
+	   <script>
+		  //HEADER JS
+	   (() =>{
+		
+		  const openNavMenu = document.querySelector(".open-nav-menu"),
+		  closeNavMenu = document.querySelector(".close-nav-menu"),
+		  navMenu = document.querySelector(".nav-menu"),
+		  menuOverlay = document.querySelector(".menu-overlay"),
+		  mediaSize = 991;
+		
+		  openNavMenu.addEventListener("click", toggleNav);
+		  closeNavMenu.addEventListener("click", toggleNav);
+		  // close the navMenu by clicking outside
+		  menuOverlay.addEventListener("click", toggleNav);
+		
+		  function toggleNav() {
+			 navMenu.classList.toggle("open");
+			 menuOverlay.classList.toggle("active");
+			 document.body.classList.toggle("hidden-scrolling");
+		  }
+		
+		  navMenu.addEventListener("click", (event) =>{
+			  if(event.target.hasAttribute("data-toggle") && 
+				 window.innerWidth <= mediaSize){
+				 // prevent default anchor click behavior
+				 event.preventDefault();
+				 const menuItemHasChildren = event.target.parentElement;
+				// if menuItemHasChildren is already expanded, collapse it
+				if(menuItemHasChildren.classList.contains("active")){
+				   collapseSubMenu();
+				}
+				else{
+				  // collapse existing expanded menuItemHasChildren
+				  if(navMenu.querySelector(".menu-item-has-children.active")){
+				   collapseSubMenu();
+				  }
+				  // expand new menuItemHasChildren
+				  menuItemHasChildren.classList.add("active");
+				  const subMenu = menuItemHasChildren.querySelector(".sub-menu");
+				  subMenu.style.maxHeight = subMenu.scrollHeight + "px";
+				}
+			  }
+		  });
+		  function collapseSubMenu(){
+			 navMenu.querySelector(".menu-item-has-children.active .sub-menu")
+			 .removeAttribute("style");
+			 navMenu.querySelector(".menu-item-has-children.active")
+			 .classList.remove("active");
+		  }
+		  function resizeFix(){
+			  // if navMenu is open ,close it
+			  if(navMenu.classList.contains("open")){
+				 toggleNav();
+			  }
+			  // if menuItemHasChildren is expanded , collapse it
+			  if(navMenu.querySelector(".menu-item-has-children.active")){
+				   collapseSubMenu();
+			 }
+		  }
+		
+		  window.addEventListener("resize", function(){
+			 if(this.innerWidth > mediaSize){
+				resizeFix();
+			 }
+		  });
+		
+		})();
+	   </script>
+	
+	<!-- <img src="/img/image.jpg"> -->
+
+
+
+	
+<!-- Top Carousel Section 	 -->
+	<section class="slider">
+		<div class="myslide fade">
+			<div class="txt">
+			  <h1></h1>
+			  <p>FEDHA LAND VENTURES</p>
+			</div>
+			<img src="/img/hero_page/carosel/1.jpg" style="width: 100%; height: 100%;">
+		  </div>
+		  
+		  <div class="myslide fade">
+			<div class="txt">
+			  <h1></h1>
+			  <p>INVEST WITH US NOW!!</p>
+			</div>
+			<img src="/img/hero_page/carosel/2.jpg" style="width: 100%; height: 100%;">
+		  </div>
+		  
+		  <div class="myslide fade">
+			<div class="txt">
+			  <h1></h1>
+			  <p>WHERE DREAMS FIND THEIR ADDRESS</p>
+			</div>
+			<img src="/img/hero_page/carosel/3.jpg" style="width: 100%; height: 100%;">
+		  </div>
+		  
+		  <div class="myslide fade">
+			<div class="txt">
+			  <h1></h1>
+			  <p>OPENING NEW HORAIZONS IN PROPERTY AQUISITION</p>
+			</div>
+			<img src="/img/hero_page/carosel/4.jpg" style="width: 100%; height: 100%;">
+		  </div>
+		  
+		  <div class="myslide fade">
+			<div class="txt">
+			  <h1></h1>
+			  <p>OFFERING GURANTEED SERVIVES</p>
+			</div>
+			<img src="/img/hero_page/carosel/5.jpg" style="width: 100%; height: 100%;">
+		  </div>
+		  <!-- /fade css -->
+		  
+		  <!-- onclick js -->
+		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		  
+		  <div class="dotsbox" style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+			<span class="dot" onclick="currentSlide(5)"></span>
+		  </div>
+		  <!-- /onclick js -->
+
+		  <script>
+			const myslide = document.querySelectorAll('.myslide'),
+			dot = document.querySelectorAll('.dot');
+		  let counter = 1;
+		  slidefun(counter);
+		  
+		  let timer = setInterval(autoSlide, 8000);
+		  function autoSlide() {
+		  counter += 1;
+		  slidefun(counter);
+		  }
+		  function plusSlides(n) {
+		  counter += n;
+		  slidefun(counter);
+		  resetTimer();
+		  }
+		  function currentSlide(n) {
+		  counter = n;
+		  slidefun(counter);
+		  resetTimer();
+		  }
+		  function resetTimer() {
+		  clearInterval(timer);
+		  timer = setInterval(autoSlide, 8000);
+		  }
+		  
+		  function slidefun(n) {
+		  
+		  let i;
+		  for(i = 0;i<myslide.length;i++){
+			myslide[i].style.display = "none";
+		  }
+		  for(i = 0;i<dot.length;i++) {
+			dot[i].className = dot[i].className.replace(' active', '');
+		  }
+		  if(n > myslide.length){
+			 counter = 1;
+			 }
+		  if(n < 1){
+			 counter = myslide.length;
+			 }
+		  myslide[counter - 1].style.display = "block";
+		  dot[counter - 1].className += " active";
+		  }
+		  </script>
+
+
+
+
+
+
+
+	</section>
+
+
+
+<!-- Best deals section  -->
+	<div class="headings">
+		<p>Best Deals On sale <i class="fas fa-caret-down"></i><i class="fas fa-caret-down"></i><i class="fas fa-caret-down"></i></p>
+		<p>Available</p>
+	</div>
+	<section class="cardcontainer">
+		<div class="card available">
+			<a href="/html-pages/fadhili-garden-makutano.html">
+			<div class="image">
+			  <img src="/img/hero_page/propertycards/image1.jpg">
+			</div>
+			<div class="title">
+			  <h1><a href="/html-pages/fadhili-garden-makutano.html">Fadhili Garden Makutano</a></h1>
+			</div>
+			<div class="des">
+			  <p><i class="fas fa-arrows-alt-h"></i>50x100</p>
+			  <p><i class="fas fa-map-marker-alt"></i>5km off Makutano junction</p>
+			  <p><i class="fas fa-align-left"></i>100k deposit - payable in 6 months</p>
+			  <button>350,000/=</button>
+			</div>
+		  </a>
+		  </div>
+		<div class="card coming-soon">
+			<a href="/html-pages/fadhili-garden-makutano.html">
+			<div class="image">
+			  <img src="/img/hero_page/propertycards/image1.jpg">
+			</div>
+			<div class="title">
+			  <h1><a href="/html-pages/fadhili-garden-makutano.html">_Property 2_</a></h1>
+			</div>
+			<div class="des">
+			  <p><i class="fas fa-arrows-alt-h"></i>Size</p>
+			  <p><i class="fas fa-map-marker-alt"></i>Location</p>
+			  <p><i class="fas fa-align-left"></i>100k deposit - payable in 6 months</p>
+			  <button>--/=</button>
+			</div>
+		  </a>
+		  </div>
+		<div class="card coming-soon">
+			<a href="/html-pages/fadhili-garden-makutano.html">
+			<div class="image">
+			  <img src="/img/hero_page/propertycards/image1.jpg">
+			</div>
+			<div class="title">
+			  <h1><a href="/html-pages/fadhili-garden-makutano.html">_property 3_</a></h1>
+			</div>
+			<div class="des">
+			  <p><i class="fas fa-arrows-alt-h"></i>Size</p>
+			  <p><i class="fas fa-map-marker-alt"></i>Location</p>
+			  <p><i class="fas fa-align-left"></i>100k deposit - payable in 6 months</p>
+			  <button>--/=</button>
+			</div>
+		  </a>
+		  </div>
+	</section>
+
+	<div class="headings">
+		<p>Book Visit <i class="fas fa-caret-down"></i><i class="fas fa-caret-down"></i><i class="fas fa-caret-down"></i></p>
+		<p class="contact">Contact</p>
+	</div>
+	<section class="reachout">
+		<div class="contactForm">
+			<form>
+				<h3>Site Visit</h3>
+				<div class="inputBox">
+					<input type="text" name="Name" required="required">
+					<span>Full Name</span>
+				</div>
+				<div class="inputBox">
+					<input type="text" name="Email" required="required">
+					<span>Email</span>
+				</div>
+				<div class="inputBox">
+					<input type="text"  name="Phone no" pattern="[0-9]{10}" required>
+					<span>Phone</span>
+				</div>
+				<div class="inputBox">
+					<select name="Property to Visit" id="#" required="">
+						<option value="">--Choose Property visit--</option>
+						<option value="Fadhili Garden Makutano">Fadhili Garden Makutano</option>
+					</select>
+				</div>
+				<div class="inputBox">
+					<input type="submit" value="Book">
+				</div>
+			</form>
+		</div>
+		<div class="contactForm message">
+			<form>
+				<h3>Message Us</h3>
+				<div class="inputBox">
+					<input type="text" name="Name" required="required">
+					<span>Full Name</span>
+				</div>
+				<div class="inputBox">
+					<input type="text" name="Email" required="required">
+					<span>Email</span>
+				</div>
+				<div class="inputBox">
+					<textarea required="required"></textarea>
+					<span>Type your Message...</span>
+				</div>
+				<div class="inputBox">
+					<input type="submit" value="Send">
+				</div>
+			</form>
+		</div>
+	</section>
+	<div class="headings">
+		<p>Our Team <i class="fas fa-caret-down"></i><i class="fas fa-caret-down"></i><i class="fas fa-caret-down"></i></p>
+		<p>View All</p>
+	</div>
+	<section class="teamsection">
+		<div class="profilecard">
+			<div class="card-image">
+				<img src="/img/hero_page/Teammembers/profile2.jpg" alt="Profile image">
+			</div>
+			<article class="name">C.E.O</article>
+			<p class="namet">Grace</p>
+			<article class="aboutmember">About .................................. <br>.............................. <br> .....</article>
+			<div class="socials">
+				<a href="#" class="facebook"><i class="fab fa-linkedin"></i></a>
+				<a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+			</div>
+		</div>
+		<div class="profilecard">
+			<div class="card-image">
+				<img src="/img/hero_page/Teammembers/profile2.jpg" alt="Profile image">
+			</div>
+			<article class="name">PROJECT MANAGER</article>
+			<p class="namet">Alex</p>
+			<article class="aboutmember">About .................................. <br>.............................. <br> .....</article>
+			<div class="socials">
+				<a href="#" class="facebook"><i class="fab fa-linkedin"></i></a>
+				<a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+			</div>
+		</div>
+		<div class="profilecard">
+			<div class="card-image">
+				<img src="/img/hero_page/Teammembers/profile2.jpg" alt="Profile image">
+			</div>
+			<article class="name">C.M.O</article>
+			<p class="namet">Cleff K.</p>
+			<article class="aboutmember">About .................................. <br>.............................. <br> .....</article>
+			<div class="socials">
+				<a href="#" class="facebook"><i class="fab fa-linkedin"></i></a>
+				<a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+			</div>
+		</div>
+	</section>
+	<div class="headings">
+		<p>Testimonials <i class="fas fa-caret-down"></i><i class="fas fa-caret-down"></i><i class="fas fa-caret-down"></i></p>
+	</div>
+
+
+<!-- Testionials  -->
+	<section class="ourclientstestimony">
+		<div class="testimonials-section">
+	
+			<!-- Section Header Starts -->
+			<header class="section-header">
+				<h1>What Our Clients Say</h1>
+			</header>
+			<!-- Section Header Ends -->
+		
+			<!-- Owl Carousel Slider Starts -->
+			<div class="owl-carousel owl-theme testimonials-container">
+				<!-- Item1 Starts -->
+				<div class="item testimonial-card">
+					<main class="test-card-body">
+						<div class="quote">
+							<i class="fa fa-quote-left"></i>
+							<h2>The Best</h2>
+						</div>
+						<p>
+					I would like to express my heartfelt gratitude for their exceptional services. I invested with them, and to my delight, I have already received my title deed. The efficiency and professionalism they exhibited throughout the process were truly impressive. I applaud Fedha Land Properties for their commitment to delivering results promptly.
+				  </p>
+						<div class="ratings">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+					</main>
+					<div class="profile">
+						<div class="profile-image">
+							<img src="/img/hero_page/Testimonials/1.jpeg">
+						</div>
+						<div class="profile-desc">
+							<span>Edwin Barasa</span>
+							<span>Land Client</span>
+						</div>
+					</div>
+				</div>
+				<!-- Item1 Ends -->
+		
+				<!-- Item2 Starts -->
+				<div class="item testimonial-card">
+					<main class="test-card-body">
+						<div class="quote">
+							<i class="fa fa-quote-left"></i>
+							<h2>Great deals</h2>
+						</div>
+						<p>
+					A big thank you to Fedha Land Properties for their outstanding services. I entrusted them with my investment, and I am thrilled to announce that I have recently received my title deed. Their dedication and attention to detail have made the entire experience smooth and rewarding. I highly recommend  to anyone looking for reliable and efficient real estate solutions.
+				  </p>
+						<div class="ratings">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+					</main>
+					<div class="profile">
+						<div class="profile-image">
+							<img src="/img/hero_page/Testimonials/2.jpeg">
+						</div>
+						<div class="profile-desc">
+							<span>Aisha</span>
+							<span>Land Client</span>
+						</div>
+					</div>
+				</div>
+				<!-- Item2 Ends -->
+		
+				<!-- Item3 Starts -->
+				<div class="item testimonial-card">
+					<main class="test-card-body">
+						<div class="quote">
+							<i class="fa fa-quote-left"></i>
+							<h2>Phenomenal</h2>
+						</div>
+						<p>
+					I cannot thank Fedha Land Properties enough for their excellent services. Not only did they help me secure my dream property, but they also expedited the title deed process. I am overjoyed to hold my title deed in my hands, and it's all thanks to their expertise and prompt actions.This truly goes above and beyond for their clients.
+				  </p>
+						<div class="ratings">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+					</main>
+					<div class="profile">
+						<div class="profile-image">
+							<img src="/img/hero_page/Testimonials/3.jpeg">
+						</div>
+						<div class="profile-desc">
+							<span>Raphael</span>
+							<span>Land Client</span>
+						</div>
+					</div>
+				</div>
+				<!-- Item3 Ends -->
+		
+				<!-- Item4 Starts -->
+				<div class="item testimonial-card">
+					<main class="test-card-body">
+						<div class="quote">
+							<i class="fa fa-quote-left"></i>
+							<h2>Amazing</h2>
+						</div>
+						<p>
+					Kudos to Fedha Land Properties for their outstanding performance. Investing with them was a wise decision, as I recently received my title deed without any hassle. Their professionalism and dedication to customer satisfaction are unparalleled. I am grateful to have chosen them as my trusted partner in real estate.
+				  </p>
+						<div class="ratings">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+					</main>
+					<div class="profile">
+						<div class="profile-image">
+							<img src="/img/hero_page/Testimonials/4.jpeg">
+						</div>
+						<div class="profile-desc">
+							<span>Evalyne</span>
+							<span>Land Client</span>
+						</div>
+					</div>
+				</div>
+				<!-- Item4 Ends -->
+		
+				<!-- Item5 Starts -->
+				<div class="item testimonial-card">
+					<main class="test-card-body">
+						<div class="quote">
+							<i class="fa fa-quote-left"></i>
+							<h2>Affordable</h2>
+						</div>
+						<p>
+					I want to express my sincere appreciation to Fedha Land Properties for their exceptional services. It's with great pleasure that I share my excitement in receiving my title deed promptly. They have exceeded my expectations in terms of efficiency and attention to detail. They have set a benchmark in the industry, and I am proud to be associated with them.
+				  </p>
+						<div class="ratings">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+						</div>
+					</main>
+					<div class="profile">
+						<div class="profile-image">
+							<img src="/img/hero_page/Testimonials/5.jpeg">
+						</div>
+						<div class="profile-desc">
+							<span>Wanjiru</span>
+							<span>Land Client</span>
+						</div>
+					</div>
+				</div>
+				<!-- Item5 Ends -->
+		
+				<!-- Item6 Starts -->
+				<div class="item testimonial-card">
+					<main class="test-card-body">
+						<div class="quote">
+							<i class="fa fa-quote-left"></i>
+							<h2>Fedha Tosha</h2>
+						</div>
+						<p>
+					A huge thank you to Fedha Land Properties for their exceptional work. I am thrilled to announce that I have already received my title deed, thanks to their expertise and dedication. They have proven to be a reliable and trustworthy company that delivers on their promises. I wholeheartedly recommend them to anyone seeking a seamless real estate experience.
+				  <p>
+						<div class="ratings">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+		
+						</div>
+					</main>
+					<div class="profile">
+						<div class="profile-image">
+							<img src="/img/hero_page/Testimonials/6.jpeg">
+						</div>
+						<div class="profile-desc">
+							<span>Francis</span>
+							<span>Land client</span>
+						</div>
+					</div>
+				</div>
+				<!-- Item6 Ends -->
+			</div>
+				<!-- Owl Carousel Slider Ends -->
+    <!--   *****   JQuery Link   *****   -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+<!--   *****   Owl Carousel js Link  *****  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	</section>
+
+<!-- footer section  -->
+<footer>
+	<div class="foot">
+	  <div class="top">
+		<div class="logo-details">
+		  <span class="logo_name">Fedha Land Ventures</span>
+		</div>
+		<div class="media-icons">
+		  <a href="https://web.facebook.com/%F0%9D%90%85%F0%9D%90%9E%F0%9D%90%9D%F0%9D%90%A1%F0%9D%90%9A-%F0%9D%90%8B%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9D-%F0%9D%90%95%F0%9D%90%9E%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%AE%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%AC-114931514922653" target="_blank"><i class="fab fa-facebook-f"></i></a>
+		  <a href="https://twitter.com/search?q=fedha%20land%20ventures&src=typed_query" target="_blank"><i class="fab fa-twitter"></i></a>
+		  <a href="https://www.instagram.com/fedhalandventures/" target="_blank"><i class="fab fa-instagram"></i></a>
+		  <a href="https://wa.me/+254798384040" target="_blank"><i class="fab fa-whatsapp"></i></a>
+		  <a href="https://www.tiktok.com/@fedhalandventures" target="_blank"><i class="fab fa-tiktok"></i></a>
+		  <a href="https://www.youtube.com/results?search_query=fedha+land+ventures" target="_blank"><i class="fab fa-youtube"></i></a>
+		</div>
+	  </div>
+	  <div class="link-boxes">
+		<ul class="box">
+		  <li class="link_name">Quick links</li>
+		  <li><a href="/index.html">Home</a></li>
+		  <li><a href="#">properties</a></li>
+		  <li><a href="#">About us</a></li>
+		  <li><a href="#">diaspora clients</a></li>
+		</ul>
+		<ul class="box">
+		  <li class="link_name">Info</li>
+		  <li><a href="https://www.google.com/maps/place/Fedha+Land+Ventures/@-1.1471466,36.9584616,19z/data=!4m6!3m5!1s0x182f474b80c7eeff:0xcc6b79a45ed5fc75!8m2!3d-1.1470355!4d36.959198!16s%2Fg%2F11stj96z1b?entry=ttu">Location <br>
+		  Nyongo house 1st floor-Ruiru<br>
+		  
+		  </a></li>
+		  <li><a href="#">Helpline</a></li>
+		</ul>
+		<ul class="box">
+		  <li class="link_name">plots for sale</li>
+		  <li><a href="#">50 x 100 Deals</a></li>
+		  <li><a href="#">2</a></li>
+		  <li><a href="#">3</a></li>
+		</ul>
+		<ul class="box">
+		  <li class="link_name">Projects</li>
+		  <li><a href="#">Fadhili Garden Makutano</a></li>
+		  <!-- <li><a href="#">kenya</a></li>
+		  <li><a href="#">nairobi</a></li> -->
+		</ul>
+		<ul class="box input-box">
+		  <li class="link_name">Subscribe</li>
+		  <li><input type="email" placeholder="Enter your email" name="email" required></li>
+		  <li><input type="button" value="Subscribe"></li>
+		</ul>        
+	  </div>
+	</div>
+	<div class="bottom-details">
+	  <div class="bottom_text">
+		<span class="copyright_text">Copyright &#169; 2023 <a href="#"></a>All rights reserved</span>
+		<span class="policy_terms">
+		  <a href="#">Privacy policy</a>
+		  <a href="#">Terms & condition</a>
+		</span>
+	  </div>
+	</div>
+  </footer>
+
+  <!-- javascript link-->
+  <script src="/js/script.js"></script>
+  <script type="text/javascript" src="/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <!--   *****   Owl Carousel js Link  *****  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+</body>
+</html>
