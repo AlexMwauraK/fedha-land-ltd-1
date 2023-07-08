@@ -140,7 +140,7 @@
     border-color: #CCEEFF;
 }
 .accordion-content.open{
-    padding-bottom: 100px;
+    padding-bottom: 20px;
 }
 .accordion-content > header{
     display: flex;
