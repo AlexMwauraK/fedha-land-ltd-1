@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.aboutus{
+    height: 90vh;
+    background: #DCDDE0;
+    display: flex;
+    justify-content: center;
+}
+.aboutinfo{
+    /* border: 1px solid #000; */
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    padding: 20px;
+}
+.details.more h1{
+    font-weight: bold;
+}
+.details.more {
+    margin-left: 20px;
+    font-family: Montserrat;
+    font-size: 17px;
+  }
+
+
+
+.details img{
+    width: 300px;
+    border-radius: 10px;
+
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .aboutus {
+      height: 170vh;
+    }
+  
+    .aboutinfo {
+      display: flex;
+      justify-content: unset;
+      flex-direction: column;
+    }
+  
+    .details img {
+      max-width: 100%;
+    }
+  
+    .details.more {
+      margin-top: 20px;
+    }
+  
+    .details.more h1 {
+      font-size: 24px;
+    }
+  
+    .details.more p {
+      font-size: 16px;
+    }
+  }
