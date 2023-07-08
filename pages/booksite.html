@@ -24,6 +24,8 @@
 	<link rel="icon" type="image/png" href="/img/favicon.png">
     <link rel="stylesheet" href="/css/property.css">
 	<!--Script-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.css">
 	<script src="/js/script.js"></script>
 </head>
 <body>
@@ -86,7 +88,7 @@
 					   <li class="menu-item menu-item-has-children">
 						  <a href="#" data-toggle="sub-menu">Properties<i class="plus"></i></a>
 						  <ul class="sub-menu">
-							  <li class="menu-item"><a href="#">Fadhili Garden</a></li>
+							  <li class="menu-item"><a href="/pages/fadhili-garden.html">Fadhili Garden</a></li>
 							  <li class="menu-item"><a href="#">Property 2</a></li>
 							  <li class="menu-item"><a href="#">Propert 3</a></li>
 						  </ul>
@@ -183,34 +185,73 @@
 		<p class="contact">Contact</p>
 	</div>
 	<section class="reachout">
-		<div class="contactForm">
-			<form>
-				<h3>Site Visit</h3>
-				<div class="inputBox">
-					<input type="text" name="Name" required="required">
-					<span>Full Name</span>
-				</div>
-				<div class="inputBox">
-					<input type="text" name="Email" required="required">
-					<span>Email</span>
-				</div>
-				<div class="inputBox">
-					<input type="text"  name="Phone no" pattern="[0-9]{10}" required>
-					<span>Phone</span>
-				</div>
-				<div class="inputBox">
-					<select name="Property to Visit" id="#" required="">
-						<option value="">--Choose Property visit--</option>
-						<option value="Fadhili Garden Makutano">Fadhili Garden Makutano</option>
-					</select>
-				</div>
-				<div class="inputBox">
-					<input type="submit" value="Book">
-				</div>
-			</form>
-		</div>
-		<div class="contactForm message">
-			<form>
+        <div class="contactForm">
+            <form action="https://formsubmit.co/fedhalandventures@gmail.com" method="POST">
+                <h3>Site Visit</h3>
+                <div class="inputBox">
+                    <input type="text" name="Name" required="required">
+                    <span>Full Name</span>
+                </div>
+                <div class="inputBox">
+                    <input type="email" name="Email" required="required">
+                    <span>Email</span>
+                </div>
+                <div class="inputBox">
+                    <input type="tel" name="Phone no" pattern="[0-9]{10}" required="required">
+                    <span>Phone</span>
+                </div>
+                <div class="inputBox">
+                    <select name="Property to Visit" required="">
+                        <option value="">--Choose Property visit--</option>
+                        <option value="Fadhili Garden Makutano">Fadhili Garden Makutano</option>
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <input id="submitBtn" type="submit" value="Book">
+                    <!-- Form submit buttons -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://fedhalandventures.co.ke/pages/booksite.html">
+                    <input type="hidden" name="_template" value="table">
+                </div>
+            </form>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            // Submit button
+            document.getElementById("submitBtn").addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent form submission
+        
+                // Check if all required fields are filled
+                var nameInput = document.getElementsByName("Name")[0].value;
+                var phoneInput = document.getElementsByName("Phone no")[0].value;
+                var emailInput = document.getElementsByName("Email")[0].value;
+                var propertyInput = document.getElementsByName("Property to Visit")[0].value;
+        
+                if (nameInput && phoneInput && emailInput && propertyInput) {
+                    Swal.fire({
+                        icon: "success",
+                        title: "Done!",
+                        text: "Booking successful.",
+                    }).then(function() {
+                        // Submit the form after the user dismisses the pop-up
+                        document.querySelector("form").submit();
+                    });
+                } else {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Oops!",
+                        text: "Please fill in all required fields.",
+                    });
+                }
+            });
+        </script>
+        
+
+
+
+        <div class="contactForm message">
+			<form action="https://formsubmit.co/fedhalandventures@gmail.com" method="POST">
 				<h3>Message Us</h3>
 				<div class="inputBox">
 					<input type="text" name="Name" required="required">
@@ -225,12 +266,20 @@
 					<span>Type your Message...</span>
 				</div>
 				<div class="inputBox">
-					<input type="submit" value="Send">
+					<input id="submitBtn" type="submit" value="Send">
+                    <!-- Form submit buttons -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://fedhalandventures.co.ke/pages/booksite.html">
+                    <input type="hidden" name="_template" value="table">
 				</div>
 			</form>
 		</div>
+        
+        
+        
+        
 	</section>
-
+   
 
 
 
