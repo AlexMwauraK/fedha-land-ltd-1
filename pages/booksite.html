@@ -177,257 +177,62 @@
 
 
 
-	
-<!-- Top Carousel Section 	 -->
-	<section class="slider">
-		<div class="myslide fade">
-			<div class="txt">
-			  <h1></h1>
-			  <p>FEDHA LAND VENTURES</p>
-			</div>
-			<img src="/img/hero_page/carosel/1.jpg" style="width: 100%; height: 100%;">
-		  </div>
-		  
-		  <div class="myslide fade">
-			<div class="txt">
-			  <h1></h1>
-			  <p>INVEST WITH US NOW!!</p>
-			</div>
-			<img src="/img/hero_page/carosel/2.jpg" style="width: 100%; height: 100%;">
-		  </div>
-		  
-		  <div class="myslide fade">
-			<div class="txt">
-			  <h1></h1>
-			  <p>WHERE DREAMS FIND THEIR ADDRESS</p>
-			</div>
-			<img src="/img/hero_page/carosel/3.jpg" style="width: 100%; height: 100%;">
-		  </div>
-		  
-		  <div class="myslide fade">
-			<div class="txt">
-			  <h1></h1>
-			  <p>OPENING NEW HORAIZONS IN PROPERTY AQUISITION</p>
-			</div>
-			<img src="/img/hero_page/carosel/4.jpg" style="width: 100%; height: 100%;">
-		  </div>
-		  
-		  <div class="myslide fade">
-			<div class="txt">
-			  <h1></h1>
-			  <p>BUY & BUILD NOW</p>
-			</div>
-			<img src="/img/hero_page/carosel/5.jpg" style="width: 100%; height: 100%;">
-		  </div>
-		  <!-- /fade css -->
-		  
-		  <!-- onclick js -->
-		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-			<a class="next" onclick="plusSlides(1)">&#10095;</a>
-		  
-		  <div class="dotsbox" style="text-align:center">
-			<span class="dot" onclick="currentSlide(1)"></span>
-			<span class="dot" onclick="currentSlide(2)"></span>
-			<span class="dot" onclick="currentSlide(3)"></span>
-			<span class="dot" onclick="currentSlide(4)"></span>
-			<span class="dot" onclick="currentSlide(5)"></span>
-		  </div>
-		  <!-- /onclick js -->
 
-		  <script>
-			const myslide = document.querySelectorAll('.myslide'),
-			dot = document.querySelectorAll('.dot');
-		  let counter = 1;
-		  slidefun(counter);
-		  
-		  let timer = setInterval(autoSlide, 8000);
-		  function autoSlide() {
-		  counter += 1;
-		  slidefun(counter);
-		  }
-		  function plusSlides(n) {
-		  counter += n;
-		  slidefun(counter);
-		  resetTimer();
-		  }
-		  function currentSlide(n) {
-		  counter = n;
-		  slidefun(counter);
-		  resetTimer();
-		  }
-		  function resetTimer() {
-		  clearInterval(timer);
-		  timer = setInterval(autoSlide, 8000);
-		  }
-		  
-		  function slidefun(n) {
-		  
-		  let i;
-		  for(i = 0;i<myslide.length;i++){
-			myslide[i].style.display = "none";
-		  }
-		  for(i = 0;i<dot.length;i++) {
-			dot[i].className = dot[i].className.replace(' active', '');
-		  }
-		  if(n > myslide.length){
-			 counter = 1;
-			 }
-		  if(n < 1){
-			 counter = myslide.length;
-			 }
-		  myslide[counter - 1].style.display = "block";
-		  dot[counter - 1].className += " active";
-		  }
-		  </script>
-
-
-
-
-
-
-
+       <div class="headings">
+		<p>Book Visit <i class="fas fa-caret-down"></i><i class="fas fa-caret-down"></i><i class="fas fa-caret-down"></i></p>
+		<p class="contact">Contact</p>
+	</div>
+	<section class="reachout">
+		<div class="contactForm">
+			<form>
+				<h3>Site Visit</h3>
+				<div class="inputBox">
+					<input type="text" name="Name" required="required">
+					<span>Full Name</span>
+				</div>
+				<div class="inputBox">
+					<input type="text" name="Email" required="required">
+					<span>Email</span>
+				</div>
+				<div class="inputBox">
+					<input type="text"  name="Phone no" pattern="[0-9]{10}" required>
+					<span>Phone</span>
+				</div>
+				<div class="inputBox">
+					<select name="Property to Visit" id="#" required="">
+						<option value="">--Choose Property visit--</option>
+						<option value="Fadhili Garden Makutano">Fadhili Garden Makutano</option>
+					</select>
+				</div>
+				<div class="inputBox">
+					<input type="submit" value="Book">
+				</div>
+			</form>
+		</div>
+		<div class="contactForm message">
+			<form>
+				<h3>Message Us</h3>
+				<div class="inputBox">
+					<input type="text" name="Name" required="required">
+					<span>Full Name</span>
+				</div>
+				<div class="inputBox">
+					<input type="text" name="Email" required="required">
+					<span>Email</span>
+				</div>
+				<div class="inputBox">
+					<textarea required="required"></textarea>
+					<span>Type your Message...</span>
+				</div>
+				<div class="inputBox">
+					<input type="submit" value="Send">
+				</div>
+			</form>
+		</div>
 	</section>
 
 
 
-<!--Description section  -->
-	<div class="headings">
-		<p>Fadhili Garden Makutano  <i class="fas fa-caret-down"></i><i class="fas fa-caret-down"></i><i class="fas fa-caret-down"></i></p>
-	</div>
-
-    <div class="main-descriprion">
-        <div class="information">
-          <h3>350,000/= Cash price</h3>
-          <P><i class="fas fa-check"></i> Are you looking for prime land to build your dream home not far from Nairobi?  Fadhili Garden Makutano - Phase 1 is the place. It offers your family a serene living and a quiet place away from the hectic and noisy city environment .
-          </P>
-          <p><i class="fas fa-check"></i>
-            Prime 50X100 plots strategically located only 5kms off Makutano Junction (along the new Kenol - Marua dual carriageway.)
-          </p>
-          <p><i class="fas fa-check"></i>
-            Payment plan inclusive of title deed fee: <br>
-      350,000Ksh for cash buyers. <br>
-      385,000Ksh (Deposit 100K and pay balance in 6 months). <br>
-      Note: prices are title fee inclusive.
-      
-          </p>
-        </div>
-      
-      <!-- Land Features   -->
-        <div class="features">
-          <table >
-            <tr>
-              <th>Features</th>
-            </tr>
-      
-          <tr>
-            <td>
-              1. Well drained virgin red soil for immediate settlement & agribusiness.
-            </td>
-          </tr>
-         
-          <tr>
-            <td>
-              2. Neighbouring Kamweli Shopping centre, Kamweli Secondary school and Kamweli Dispensary.
-            </td>
-          </tr>
-         
-          <tr>
-            <td>
-              3. All weather access road.
-            </td>
-          </tr>
-         
-          <tr>
-            <td>
-              4. Well developed and secure neighborhood.
-            </td>
-          </tr>
-         
-          <tr>
-            <td>
-              5. Electricity and water available.
-            </td>
-          </tr>
-         
-          </table>
-        </div>
-      </div>
-
-
-
-
-<!-- Buttons  -->
-<div class="sitevisit">
-    <a href="/index.html" class="glink"><p class="btn1">View More Properties</p></a>
-    <a href="/pages/booksite.html" class="glink"><p class="btn2">Book Free site visit</p></a>
-  </div>
-
-<!-- Accordion  -->
-<section class="saccordion">
-
-		<div class="accordion">
-			<div class="accordion-content">
-				<header>
-					<span class="title">More Info...</span>
-					<i class="fa-solid fa-plus"></i>
-				</header>
-
-				<p class="description">
-					<a href="https://www.google.com/maps/place/0%C2%B047'30.1%22S+37%C2%B018'09.9%22E/@-0.7914633,37.3017499,349m/data=!3m1!1e3!4m4!3m3!8m2!3d-0.791683!4d37.302753?entry=ttu">View precise location</a>
-				</p>
-			</div>
-
-			<div class="accordion-content">
-				<header>
-					<span class="title">View Gallery</span>
-					<i class="fa-solid fa-plus"></i>
-				</header>
-
-				<p class="description images">
-						<img src="/img/pages/fadhili-gardens/1.jpg">
-						<img src="/img/pages/fadhili-gardens/2.jpg">
-						<img src="/img/pages/fadhili-gardens/3.jpg">
-						<img src="/img/pages/fadhili-gardens/4.jpg">
-						<img src="/img/pages/fadhili-gardens/5.jpg">
-						<img src="/img/pages/fadhili-gardens/6.jpg">
-				</p>
-			</div>
-		</div>
-
-</section>
-
-<script>
-	const accordionContent = document.querySelectorAll(".accordion-content");
-
-accordionContent.forEach((item, index) => {
-    let header = item.querySelector("header");
-    header.addEventListener("click", () =>{
-        item.classList.toggle("open");
-
-        let description = item.querySelector(".description");
-        if(item.classList.contains("open")){
-            description.style.height = `${description.scrollHeight}px`; //scrollHeight property returns the height of an element including padding , but excluding borders, scrollbar or margin
-            item.querySelector("i").classList.replace("fa-plus", "fa-minus");
-        }else{
-            description.style.height = "0px";
-            item.querySelector("i").classList.replace("fa-minus", "fa-plus");
-        }
-        removeOpen(index); //calling the funtion and also passing the index number of the clicked header
-    })
-})
-
-function removeOpen(index1){
-    accordionContent.forEach((item2, index2) => {
-        if(index1 != index2){
-            item2.classList.remove("open");
-
-            let des = item2.querySelector(".description");
-            des.style.height = "0px";
-            item2.querySelector("i").classList.replace("fa-minus", "fa-plus");
-        }
-    })
-}
-</script>
 
 
 
@@ -438,6 +243,7 @@ function removeOpen(index1){
 
 
 
+	
 <!-- footer section  -->
 <footer>
 	<div class="foot">
@@ -509,4 +315,4 @@ function removeOpen(index1){
 
 
 </body>
-</html>
+</html>     
