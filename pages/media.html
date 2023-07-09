@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fedha Land Ventures</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Google Font-->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+	<!-- fontawsome icons  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+	<!-- Testimonials  -->
+    <!-- *******  Font Awesome Icons Link  ******* -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- *******  Owl Carousel Links  ******* -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+	<!--Stylesheet-->
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="icon" type="image/png" href="/img/favicon.png">
+    <link rel="stylesheet" href="/css/media.css">
+	<!--Script-->
+	<script src="/js/script.js"></script>
+</head>
+<body>
+	<div id="preloader"></div>
+	<header>
+		<div class="logo"><a href="/index.html"><img src="/img/Fedha-Logo.jpg" alt="company logo"></a></div>
+		<div class="quickinfo">
+			<div class="screen-icons">
+				<a href="mailto:fedhalandventures@gmail.com"><i class="fas fa-envelope"></i> Info@fedhalandventures.co.ke</a>
+				<a href="tel:+254798384040"><i class="fas fa-phone-alt"></i> +254798384040</a>
+			</div>	
+			<!-- MOBI -->
+		<div class="mobi-icons">
+			<p>
+				<span><a href="https://www.instagram.com/fedhalandventures/"><i class="fab fa-instagram"></i></a></span>
+			</p>
+			<p>
+				<span><a href="https://web.facebook.com/%F0%9D%90%85%F0%9D%90%9E%F0%9D%90%9D%F0%9D%90%A1%F0%9D%90%9A-%F0%9D%90%8B%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9D-%F0%9D%90%95%F0%9D%90%9E%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%AE%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%AC-114931514922653"><i class="fab fa-facebook-f"></i></a></span>
+			</p>
+			<p>
+				<span><a href="https://twitter.com/search?q=fedha%20land%20ventures&src=typed_query"><i class="fab fa-twitter"></i></a></span>
+			</p>
+			<p>
+				<span><a href="https://wa.me/+254798384040"><i class="fab fa-whatsapp"></i></a></span>
+			</p>
+		</div>	
+
+		</div>
+	</header>
+	<nav id="nav">
+		<header class="header2">
+			<div class="container">
+			   <div class="header-main">
+				  <div class="open-nav-menu">
+					 <span></span>
+				  </div>
+				  <div class="menu-overlay">
+				  </div>
+				  <!-- navigation menu start -->
+				  <div class="nav-menu">
+					<div class="close-nav-menu">
+					   <img src="/img/close.svg" alt="close">
+					</div>
+					<ul class="menu">
+					  <li class="menu-item">
+						 <a href="/index.html">Home</a>
+					  </li>
+					   <li class="menu-item menu-item-has-children">
+						  <a href="#" data-toggle="sub-menu">About<i class="plus"></i></a>
+						  <ul class="sub-menu">
+							  <li class="menu-item"><a href="/pages/About.html">About</a></li>
+							  <li class="menu-item"><a href="#">Our Team</a></li>
+							  <li class="menu-item"><a href="#">FAQs</a></li>
+						  </ul>
+					   </li>
+	   
+					   <li class="menu-item">
+						  <a href="/pages/media.html">Media</a>
+					   </li>
+					   <li class="menu-item menu-item-has-children">
+						  <a href="#" data-toggle="sub-menu">Properties<i class="plus"></i></a>
+						  <ul class="sub-menu">
+							  <li class="menu-item"><a href="/pages/fadhili-garden.html">Fadhili Garden</a></li>
+							  <li class="menu-item"><a href="#">Property 2</a></li>
+							  <li class="menu-item"><a href="#">Propert 3</a></li>
+						  </ul>
+					   </li>
+					   <li class="menu-item">
+						  <a href="#">Contact</a>
+					   </li>
+					</ul>
+				</div>
+				  <!-- navigation menu end -->
+			   </div>
+			</div>
+		 </header>
+		 <!-- header end -->
+		</nav>
+	   
+		
+	   <script>
+		  //HEADER JS
+	   (() =>{
+		
+		  const openNavMenu = document.querySelector(".open-nav-menu"),
+		  closeNavMenu = document.querySelector(".close-nav-menu"),
+		  navMenu = document.querySelector(".nav-menu"),
+		  menuOverlay = document.querySelector(".menu-overlay"),
+		  mediaSize = 991;
+		
+		  openNavMenu.addEventListener("click", toggleNav);
+		  closeNavMenu.addEventListener("click", toggleNav);
+		  // close the navMenu by clicking outside
+		  menuOverlay.addEventListener("click", toggleNav);
+		
+		  function toggleNav() {
+			 navMenu.classList.toggle("open");
+			 menuOverlay.classList.toggle("active");
+			 document.body.classList.toggle("hidden-scrolling");
+		  }
+		
+		  navMenu.addEventListener("click", (event) =>{
+			  if(event.target.hasAttribute("data-toggle") && 
+				 window.innerWidth <= mediaSize){
+				 // prevent default anchor click behavior
+				 event.preventDefault();
+				 const menuItemHasChildren = event.target.parentElement;
+				// if menuItemHasChildren is already expanded, collapse it
+				if(menuItemHasChildren.classList.contains("active")){
+				   collapseSubMenu();
+				}
+				else{
+				  // collapse existing expanded menuItemHasChildren
+				  if(navMenu.querySelector(".menu-item-has-children.active")){
+				   collapseSubMenu();
+				  }
+				  // expand new menuItemHasChildren
+				  menuItemHasChildren.classList.add("active");
+				  const subMenu = menuItemHasChildren.querySelector(".sub-menu");
+				  subMenu.style.maxHeight = subMenu.scrollHeight + "px";
+				}
+			  }
+		  });
+		  function collapseSubMenu(){
+			 navMenu.querySelector(".menu-item-has-children.active .sub-menu")
+			 .removeAttribute("style");
+			 navMenu.querySelector(".menu-item-has-children.active")
+			 .classList.remove("active");
+		  }
+		  function resizeFix(){
+			  // if navMenu is open ,close it
+			  if(navMenu.classList.contains("open")){
+				 toggleNav();
+			  }
+			  // if menuItemHasChildren is expanded , collapse it
+			  if(navMenu.querySelector(".menu-item-has-children.active")){
+				   collapseSubMenu();
+			 }
+		  }
+		
+		  window.addEventListener("resize", function(){
+			 if(this.innerWidth > mediaSize){
+				resizeFix();
+			 }
+		  });
+		
+		})();
+	   </script>
+
+
+<!-- Media section  -->
+<div class="thegallery">
+
+    <ul class="controls">
+        <li class="buttons active" data-filter="all">All</li>
+        <li class="buttons" data-filter="Fadhili-Garden">Fadhili Garden</li>
+        <li class="buttons" data-filter="our-team">Our Team</li>
+        <li class="buttons" data-filter="property-owners">Property Owners</li>
+        <li class="buttons" data-filter="images">Images</li>
+        <li class="buttons" data-filter="posters">Posters</li>
+    </ul>
+
+    <div class="image-container">
+
+        <a href="/img/hero_page/propertycards/image1.jpg" class="image Fadhili-Garden">
+            <img src="/img/hero_page/propertycards/image1.jpg" alt="">
+        </a>
+        <a href="/img/pages/fadhili-gardens/1.jpg" class="image Fadhili-Garden">
+            <img src="/img/pages/fadhili-gardens/1.jpg" alt="">
+        </a>
+        <a href="/img/pages/fadhili-gardens/2.jpg" class="image Fadhili-Garden">
+            <img src="/img/pages/fadhili-gardens/2.jpg" alt="">
+        </a>
+        <a href="/img/pages/fadhili-gardens/3.jpg" class="image Fadhili-Garden">
+            <img src="/img/pages/fadhili-gardens/3.jpg" alt="">
+        </a>
+        <a href="/img/pages/fadhili-gardens/4.jpg" class="image Fadhili-Garden">
+            <img src="/img/pages/fadhili-gardens/4.jpg" alt="">
+        </a>
+        <a href="/img/pages/fadhili-gardens/5.jpg" class="image Fadhili-Garden">
+            <img src="/img/pages/fadhili-gardens/5.jpg" alt="">
+        </a>
+        <a href="/img/pages/fadhili-gardens/6.jpg" class="image Fadhili-Garden">
+            <img src="/img/pages/fadhili-gardens/6.jpg" alt="">
+        </a>
+
+        <a href="/img/hero_page/Teammembers/profile2.jpg" class="image our-team">
+            <img src="/img/hero_page/Teammembers/profile2.jpg" alt="">
+        </a>
+
+        <a href="/img/hero_page/Testimonials/1.jpeg" class="image property-owners">
+            <img src="/img/hero_page/Testimonials/1.jpeg" alt="">
+        </a>
+        <a href="/img/hero_page/Testimonials/2.jpeg" class="image property-owners">
+            <img src="/img/hero_page/Testimonials/2.jpeg" alt="">
+        </a>
+        <a href="/img/hero_page/Testimonials/3.jpeg" class="image property-owners">
+            <img src="/img/hero_page/Testimonials/3.jpeg" alt="">
+        </a>
+        <a href="/img/hero_page/Testimonials/4.jpeg" class="image property-owners">
+            <img src="/img/hero_page/Testimonials/4.jpeg" alt="">
+        </a>
+        <a href="/img/hero_page/Testimonials/5.jpeg" class="image property-owners">
+            <img src="/img/hero_page/Testimonials/5.jpeg" alt="">
+        </a>
+        <a href="/img/hero_page/Testimonials/6.jpeg" class="image property-owners">
+            <img src="/img/hero_page/Testimonials/6.jpeg" alt="">
+        </a>
+
+
+        <a href="/img/hero_page/carosel/1.jpg" class="image images">
+            <img src="/img/hero_page/carosel/1.jpg" alt="">
+        </a>
+        <a href="/img/hero_page/carosel/2.jpg" class="image images">
+            <img src="/img/hero_page/carosel/2.jpg" alt="">
+        </a>
+        <a href="/img/hero_page/carosel/3.jpg" class="image images">
+            <img src="/img/hero_page/carosel/3.jpg" alt="">
+        </a>
+        <a href="/img/hero_page/carosel/4.jpg" class="image images">
+            <img src="/img/hero_page/carosel/4.jpg" alt="">
+        </a>
+        <a href="/img/hero_page/carosel/5.jpg" class="image images">
+            <img src="/img/hero_page/carosel/5.jpg" alt="">
+        </a>
+
+
+        <a href="/img/pages/posters/1.jpg" class="image posters">
+            <img src="/img/pages/posters/1.jpg" alt="">
+        </a>
+        <a href="/img/pages/posters/2.jpg" class="image posters">
+            <img src="/img/pages/posters/2.jpg" alt="">
+        </a>
+        <a href="/img/pages/posters/3.jpg" class="image posters">
+            <img src="/img/pages/posters/3.jpg" alt="">
+        </a>
+        <a href="/img/pages/posters/4.jpg" class="image posters">
+            <img src="/img/pages/posters/4.jpg" alt="">
+        </a>
+        <a href="/img/pages/posters/5.jpg" class="image posters">
+            <img src="/img/pages/posters/5.jpg" alt="">
+        </a>
+        <a href="/img/pages/posters/6.jpg" class="image posters">
+            <img src="/img/pages/posters/6.jpg" alt="">
+        </a>
+        <a href="/img/pages/posters/7.jpg" class="image posters">
+            <img src="/img/pages/posters/7.jpg" alt="">
+        </a>
+        <a href="/img/pages/posters/8.jpg" class="image posters">
+            <img src="/img/pages/posters/8.jpg" alt="">
+        </a>
+        <a href="/img/pages/posters/9.jpg" class="image posters">
+            <img src="/img/pages/posters/9.jpg" alt="">
+        </a>
+
+
+    </div>
+
+</div>
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- magnific popup js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+    $('.buttons').click(function(){
+
+        $(this).addClass('active').siblings().removeClass('active');
+
+        var filter = $(this).attr('data-filter')
+
+        if(filter == 'all'){
+            $('.image').show(400);
+        }else{
+            $('.image').not('.'+filter).hide(200);
+            $('.image').filter('.'+filter).show(400);
+        }
+
+    });
+
+    $('.thegallery').magnificPopup({
+
+        delegate:'a',
+        type:'image',
+        thegallery:{
+            enabled:true
+        }
+
+    });
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- footer section  -->
+<footer>
+	<div class="foot">
+	  <div class="top">
+		<div class="logo-details">
+		  <span class="logo_name">Fedha Land Ventures</span>
+		</div>
+		<div class="media-icons">
+		  <a href="https://web.facebook.com/%F0%9D%90%85%F0%9D%90%9E%F0%9D%90%9D%F0%9D%90%A1%F0%9D%90%9A-%F0%9D%90%8B%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9D-%F0%9D%90%95%F0%9D%90%9E%F0%9D%90%A7%F0%9D%90%AD%F0%9D%90%AE%F0%9D%90%AB%F0%9D%90%9E%F0%9D%90%AC-114931514922653" target="_blank"><i class="fab fa-facebook-f"></i></a>
+		  <a href="https://twitter.com/search?q=fedha%20land%20ventures&src=typed_query" target="_blank"><i class="fab fa-twitter"></i></a>
+		  <a href="https://www.instagram.com/fedhalandventures/" target="_blank"><i class="fab fa-instagram"></i></a>
+		  <a href="https://wa.me/+254798384040" target="_blank"><i class="fab fa-whatsapp"></i></a>
+		  <a href="https://www.tiktok.com/@fedhalandventures" target="_blank"><i class="fab fa-tiktok"></i></a>
+		  <a href="https://www.youtube.com/results?search_query=fedha+land+ventures" target="_blank"><i class="fab fa-youtube"></i></a>
+		</div>
+	  </div>
+	  <div class="link-boxes">
+		<ul class="box">
+		  <li class="link_name">Quick links</li>
+		  <li><a href="/index.html">Home</a></li>
+		  <li><a href="#">properties</a></li>
+		  <li><a href="/pages/About.html">About us</a></li>
+		  <li><a href="#">diaspora clients</a></li>
+		</ul>
+		<ul class="box">
+		  <li class="link_name">Info</li>
+		  <li><a href="https://www.google.com/maps/place/Fedha+Land+Ventures/@-1.1471466,36.9584616,19z/data=!4m6!3m5!1s0x182f474b80c7eeff:0xcc6b79a45ed5fc75!8m2!3d-1.1470355!4d36.959198!16s%2Fg%2F11stj96z1b?entry=ttu">Location <br>
+		  Nyongo house 1st floor-Ruiru<br>
+		  
+		  </a></li>
+		  <li><a href="tel:+254798384040">Helpline</a></li>
+		</ul>
+		<ul class="box">
+		  <li class="link_name">plots for sale</li>
+		  <li><a href="#">50 x 100 Deals</a></li>
+		  <li><a href="#">2</a></li>
+		  <li><a href="#">3</a></li>
+		</ul>
+		<ul class="box">
+		  <li class="link_name">Projects</li>
+		  <li><a href="/pages/fadhili-garden.html">Fadhili Garden Makutano</a></li>
+		  <!-- <li><a href="#">kenya</a></li>
+		  <li><a href="#">nairobi</a></li> -->
+		</ul>
+		<ul class="box input-box">
+		  <li class="link_name">Subscribe</li>
+		  <li><input type="email" placeholder="Enter your email" name="email" required></li>
+		  <li><input type="button" value="Subscribe"></li>
+		</ul>        
+	  </div>
+	</div>
+	<div class="bottom-details">
+	  <div class="bottom_text">
+		<span class="copyright_text">Copyright &#169; 2023 <a href="#"></a>All rights reserved</span>
+		<span class="policy_terms">
+		  <a href="#">Privacy policy</a>
+		  <a href="#">Terms & condition</a>
+		</span>
+	  </div>
+	</div>
+  </footer>
+
+  <!-- javascript link-->
+  <script src="/js/script.js"></script>
+  <script type="text/javascript" src="/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <!--   *****   Owl Carousel js Link  *****  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+</body>
+</html>      
