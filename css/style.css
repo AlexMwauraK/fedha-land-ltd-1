@@ -181,7 +181,7 @@ nav{
 	position: absolute;
 	box-sizing: border-box;
 	left: 50%;
-	top:50%;
+	top: 50%;
 	background-color: #ffff;
 	height: 2px;
 	width: 100%;
@@ -215,7 +215,7 @@ nav{
 	width: 200px;
 	position: absolute;
 	left:0;
-	top: 150%;
+	top: 140%;
 	background-color: #ffffff;
 	padding: 10px 0;
 	border-top: 3px solid #FF3130;
@@ -919,8 +919,8 @@ box-shadow: 2px 1px 15px #e208082c;
 }
 .profilecard {
 	position: relative;
-	width: 380px;
-	/* height: 320px; */
+	width: 40%;
+	height: 60%;
 	background-color: #ece9f5;
 	border-radius: 5px;
 	box-shadow: 0 8px 8px 0 rgba(27, 6, 83, 0.397);
