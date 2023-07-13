@@ -185,8 +185,8 @@
 		<p class="contact">Contact</p>
 	</div>
 	<section class="reachout">
-        <div class="contactForm">
-            <form action="https://formsubmit.co/fedhalandventures@gmail.com" method="POST">
+		<div class="contactForm">
+			<form action="https://formsubmit.co/a1f0b21350b51d5cfc0dd19cf094b19e" method="POST">
                 <h3>Site Visit</h3>
                 <div class="inputBox">
                     <input type="text" name="Name" required="required">
@@ -210,47 +210,42 @@
                     <input id="submitBtn" type="submit" value="Book">
                     <!-- Form submit buttons -->
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://fedhalandventures.co.ke/pages/booksite.html">
+                    <input type="hidden" name="_next" value="https://fedhalandventures.co.ke/">
                     <input type="hidden" name="_template" value="table">
                 </div>
             </form>
-        </div>
-        
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script>
-            // Submit button
-            document.getElementById("submitBtn").addEventListener("click", function(event) {
-                event.preventDefault(); // Prevent form submission
-        
-                // Check if all required fields are filled
-                var nameInput = document.getElementsByName("Name")[0].value;
-                var phoneInput = document.getElementsByName("Phone no")[0].value;
-                var emailInput = document.getElementsByName("Email")[0].value;
-                var propertyInput = document.getElementsByName("Property to Visit")[0].value;
-        
-                if (nameInput && phoneInput && emailInput && propertyInput) {
-                    Swal.fire({
-                        icon: "success",
-                        title: "Done!",
-                        text: "Booking successful.",
-                    }).then(function() {
-                        // Submit the form after the user dismisses the pop-up
-                        document.querySelector("form").submit();
-                    });
-                } else {
-                    Swal.fire({
-                        icon: "error",
-                        title: "Oops!",
-                        text: "Please fill in all required fields.",
-                    });
-                }
-            });
-        </script>
-        
-
-
-
-        <div class="contactForm message">
+			<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+			<script>
+				// Submit button
+				document.getElementById("submitBtn").addEventListener("click", function(event) {
+					event.preventDefault(); // Prevent form submission
+			
+					// Check if all required fields are filled
+					var nameInput = document.getElementsByName("Name")[0].value;
+					var phoneInput = document.getElementsByName("Phone no")[0].value;
+					var emailInput = document.getElementsByName("Email")[0].value;
+					var propertyInput = document.getElementsByName("Property to Visit")[0].value;
+			
+					if (nameInput && phoneInput && emailInput && propertyInput) {
+						Swal.fire({
+							icon: "success",
+							title: "Done!",
+							text: "Booking successful.",
+						}).then(function() {
+							// Submit the form after the user dismisses the pop-up
+							document.querySelector("form").submit();
+						});
+					} else {
+						Swal.fire({
+							icon: "error",
+							title: "Oops!",
+							text: "Please fill in all required fields.",
+						});
+					}
+				});
+			</script>
+		</div>
+		<div class="contactForm message">
 			<form action="https://formsubmit.co/a1f0b21350b51d5cfc0dd19cf094b19e" method="POST">
 				<h3>Message Us</h3>
 				<div class="inputBox">
@@ -272,11 +267,37 @@
                     <input type="hidden" name="_next" value="https://fedhalandventures.co.ke/">
                     <input type="hidden" name="_template" value="table">
 				</div>
+			</form>
+			<script>
+				// Send button click event
+document.querySelector(".contactForm.message input[type='submit']").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Check if all required fields are filled
+    var nameInput = document.querySelector(".contactForm.message input[name='Name']").value;
+    var emailInput = document.querySelector(".contactForm.message input[name='Email']").value;
+    var messageInput = document.querySelector(".contactForm.message textarea[name='Message']").value;
+
+    if (nameInput && emailInput && messageInput) {
+        Swal.fire({
+            icon: "success",
+            title: "Success!",
+            text: "Message sent successfully.",
+        }).then(function() {
+            // Submit the form after the user dismisses the pop-up
+            document.querySelector(".contactForm.message form").submit();
+        });
+    } else {
+        Swal.fire({
+            icon: "error",
+            title: "Oops!",
+            text: "Please fill in all required fields.",
+        });
+    }
+});
+
+			</script>
 		</div>
-        
-        
-        
-        
 	</section>
    
 

@@ -441,6 +441,35 @@
                     <input type="hidden" name="_template" value="table">
 				</div>
 			</form>
+			<script>
+				// Send button click event
+document.querySelector(".contactForm.message input[type='submit']").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Check if all required fields are filled
+    var nameInput = document.querySelector(".contactForm.message input[name='Name']").value;
+    var emailInput = document.querySelector(".contactForm.message input[name='Email']").value;
+    var messageInput = document.querySelector(".contactForm.message textarea[name='Message']").value;
+
+    if (nameInput && emailInput && messageInput) {
+        Swal.fire({
+            icon: "success",
+            title: "Success!",
+            text: "Message sent successfully.",
+        }).then(function() {
+            // Submit the form after the user dismisses the pop-up
+            document.querySelector(".contactForm.message form").submit();
+        });
+    } else {
+        Swal.fire({
+            icon: "error",
+            title: "Oops!",
+            text: "Please fill in all required fields.",
+        });
+    }
+});
+
+			</script>
 		</div>
 	</section>
 
