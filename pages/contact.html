@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="/css/contact.css">
 	<!--Script-->
 	<script src="/js/script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 <body>
 	<div id="preloader"></div>
@@ -176,48 +178,86 @@
 
 <!-- Contact form  -->
 <div class="contains">
-    <div class="content">
-      <div class="left-side">
-        <div class="address details">
-          <i class="fas fa-map-marker-alt"></i>
-          <div class="topic">Address</div>
-          <div class="text-one">Nyongo house</div>
-          <div class="text-two">1st floor-Ruiru</div>
-        </div>
-        <div class="phone details">
-          <i class="fas fa-phone-alt"></i>
-          <div class="topic">Phone</div>
-          <div class="text-one">+254798384040</div>
-          <!-- <div class="text-two">+254798384040</div> -->
-        </div>
-        <div class="email details">
-          <i class="fas fa-envelope"></i>
-          <div class="topic">Email</div>
-          <div class="text-one">fedhalandventures@gmail.com</div>
-          <div class="text-two">info.fedhalandventures.co.ke</div>
-        </div>
-      </div>
-      <div class="right-side">
-        <div class="topic-text">Send us a message</div>
-        <p>If you have any questions or inquiries regarding our organization or would like to get in touch with us, please feel free to send us a message through this platform. We would be more than happy to help you in any way we can and provide any necessary assistance or information. Thank you for your interest in our mission, and we look forward to hearing from you.</p>
-      <form action="#">
-        <div class="input-box">
-          <input type="text" name="name" placeholder="Enter your name">
-        </div>
-        <div class="input-box">
-          <input type="email" name="email" placeholder="Enter your email">
-        </div>
-        <div class="input-box message-box">
-          <textarea placeholder="Enter your message"></textarea>
-        </div>
-        <div class="button">
-          <input type="button" value="Send Now" >
-        </div>
-      </form>
-    </div>
-    </div>
+	<div class="content">
+	  <div class="left-side">
+		<div class="address details">
+		  <i class="fas fa-map-marker-alt"></i>
+		  <div class="topic">Address</div>
+		  <div class="text-one">Nyongo house</div>
+		  <div class="text-two">1st floor-Ruiru</div>
+		</div>
+		<div class="phone details">
+		  <i class="fas fa-phone-alt"></i>
+		  <div class="topic">Phone</div>
+		  <div class="text-one">+254798384040</div>
+		  <!-- <div class="text-two">+254798384040</div> -->
+		</div>
+		<div class="email details">
+		  <i class="fas fa-envelope"></i>
+		  <div class="topic">Email</div>
+		  <div class="text-one">fedhalandventures@gmail.com</div>
+		  <div class="text-two">info.fedhalandventures.co.ke</div>
+		</div>
+	  </div>
+	  <div class="right-side">
+		<div class="topic-text">Send us a message</div>
+		<p>If you have any questions or inquiries regarding our organization or would like to get in touch with us, please feel free to send us a message through this platform. We would be more than happy to help you in any way we can and provide any necessary assistance or information. Thank you for your interest in our mission, and we look forward to hearing from you.</p>
+		<form action="https://formsubmit.co/a1f0b21350b51d5cfc0dd19cf094b19e" method="POST">
+		  <div class="input-box">
+			<input type="text" name="name" placeholder="Enter your name" required>
+		  </div>
+		  <div class="input-box">
+			<input type="email" name="email" placeholder="Enter your email" required>
+		  </div>
+		  <div class="input-box message-box">
+			<textarea name="message" placeholder="Enter your message" required></textarea>
+		  </div>
+		  <div class="button">
+			<input type="submit" value="Send Now">
+			<!-- Form submit buttons -->
+			<input type="hidden" name="_captcha" value="false">
+			<input type="hidden" name="_next" value="https://fedhalandventures.co.ke/pages/contact.html">
+			<input type="hidden" name="_template" value="table">
+		  </div>
+		</form>
+	  </div>
+	</div>
   </div>
-
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+	document.querySelector(".contains .button input[type='submit']").addEventListener("click", function(event) {
+	  event.preventDefault(); // Prevent default form submission
+  
+	  // Get form input values
+	  var nameInput = document.querySelector(".contains input[name='name']").value;
+	  var emailInput = document.querySelector(".contains input[name='email']").value;
+	  var messageInput = document.querySelector(".contains textarea[name='message']").value;
+  
+	  // Perform validation
+	  if (nameInput && emailInput && messageInput) {
+		Swal.fire({
+		  icon: "success",
+		  title: "Success!",
+		  text: "Message sent successfully.",
+		}).then(function(result) {
+		  if (result.isConfirmed) {
+			// Submit the form after the user dismisses the pop-up
+			document.querySelector(".contains form").submit();
+		  }
+		});
+	  } else {
+		Swal.fire({
+		  icon: "error",
+		  title: "Oops!",
+		  text: "Please fill in all required fields.",
+		});
+	  }
+	});
+  </script>
+  
+  
+  
+  
 
 
 

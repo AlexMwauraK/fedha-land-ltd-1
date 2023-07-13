@@ -87,7 +87,7 @@
     display: inline-block;
     margin-top: 12px;
   }
-  .right-side .button input[type="button"]{
+  .right-side .button input[type="submit"]{
     color: #fff;
     font-size: 18px;
     outline: none;
@@ -98,8 +98,8 @@
     cursor: pointer;
     transition: all 0.3s ease;
   }
-  .button input[type="button"]:hover{
-    background: #29bc30;
+  .button input[type="submit"]:hover{
+    background: #2ebc29af;
   }
   
   @media (max-width: 950px) {
