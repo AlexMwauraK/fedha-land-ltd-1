@@ -771,11 +771,44 @@ document.querySelector(".contactForm.message input[type='submit']").addEventList
 		  <!-- <li><a href="#">kenya</a></li>
 		  <li><a href="#">nairobi</a></li> -->
 		</ul>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 		<ul class="box input-box">
 		  <li class="link_name">Subscribe</li>
 		  <li><input type="email" placeholder="Enter your email" name="email" required></li>
-		  <li><input type="button" value="Subscribe"></li>
-		</ul>        
+		  <li><input id="subscribeBtn" type="button" value="Subscribe"></li>
+		</ul>
+		
+		<script>
+		  document.getElementById("subscribeBtn").addEventListener("click", function(event) {
+			event.preventDefault(); // Prevent default button action
+		
+			// Get input value
+			var emailInput = document.querySelector("input[name='email']").value;
+		
+			// Perform validation
+			if (emailInput) {
+			  Swal.fire({
+				icon: "success",
+				title: "Success!",
+				text: "Successfully subscribed.",
+			  }).then(function() {
+				// Update the form action URL
+				document.querySelector("ul.input-box").action = "https://formsubmit.co/a1f0b21350b51d5cfc0dd19cf094b19e";
+		
+				// Submit the form after the user dismisses the pop-up
+				document.querySelector("ul.input-box").submit();
+			  });
+			} else {
+			  Swal.fire({
+				icon: "error",
+				title: "Oops!",
+				text: "Please enter your email address.",
+			  });
+			}
+		  });
+		</script>
+			   
 	  </div>
 	</div>
 	<div class="bottom-details">
